@@ -11,13 +11,11 @@ import org.testng.annotations.Test;
 
 public class LoginTests extends BaseTest {
 
-
 	@Test
-	public void invalidEmailValidPasswordTest() {
-
+	public void loginWithInvalidEmailInvalidPassword() {
+				
 		LoginPage loginPage = new LoginPage();
-		
-		loginPage.testLogin();
+		loginPage.login();
 	}
 	
 }
