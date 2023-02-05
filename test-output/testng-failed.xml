@@ -5,8 +5,7 @@
     <classes>
       <class name="test.LoginTests">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="loginWithInvalidEmailInvalidPassword"/>
+          <include name="selectMenuOptionTest"/>
           <include name="launchBrowser"/>
         </methods>
       </class> <!-- test.LoginTests -->
