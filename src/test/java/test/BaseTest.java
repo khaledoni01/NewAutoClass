@@ -15,7 +15,8 @@ public class BaseTest {
 	
 	public static WebDriver driver = null;
 		
-	public static String baseURL = "https://nktechsolutions.com/membership-login/";
+//	public static String baseURL = "https://nktechsolutions.com/membership-login/";
+	public static String baseURL = "file:///C:/Users/khale/OneDrive/Desktop/Misc/NK%20TECH%20Solutions/Automation/WebPage/2ndPage.html";
 	
 	public static WebDriverWait wait = null;
 			
@@ -28,16 +29,7 @@ public class BaseTest {
 		
 		driver.get(baseURL);
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
 		wait = new WebDriverWait(driver, 10);
-		
-		try {
-			Thread.sleep(10000);
-		} 
-		catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 		
 	}
 	

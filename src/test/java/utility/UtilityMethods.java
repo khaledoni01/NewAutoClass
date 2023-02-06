@@ -12,9 +12,8 @@ public class UtilityMethods {
 		ele.clear();
 		ele.sendKeys(value);
 	}
-	
-	public static void jsClick(WebElement element) {
 		
+	public static void jsClick(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) BaseTest.driver;
 		js.executeScript("arguments[0].click();", element);				
 
