@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="WebPage Test(failed)">
+  <parameter name="baseURL" value="https://nktechsolutions.com/membership-login/"/>
+  <test thread-count="5" name="Basic Test(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
-      <class name="test.FirstTests">
+      <class name="test.ContactUsTests">
         <methods>
-          <include name="selectMonthTest"/>
+          <include name="submitContactForm" invocation-numbers="0"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- test.FirstTests -->
+      </class> <!-- test.ContactUsTests -->
     </classes>
-  </test> <!-- WebPage Test(failed) -->
+  </test> <!-- Basic Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

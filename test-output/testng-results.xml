@@ -1,21 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="3211" started-at="2023-02-05T17:02:34Z" finished-at="2023-02-05T17:02:37Z">
+  <suite name="Suite" duration-ms="33581" started-at="2023-02-11T16:27:03Z" finished-at="2023-02-11T16:27:36Z">
     <groups>
+      <group name="regression">
+        <method signature="ContactUsTests.submitContactForm(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.ContactUsTests@3aefe5e5]" name="submitContactForm" class="test.ContactUsTests"/>
+        <method signature="LoginTests.loginWithInvalidEmailInvalidPassword(java.lang.String, java.lang.String)[pri:0, instance:test.LoginTests@1184ab05]" name="loginWithInvalidEmailInvalidPassword" class="test.LoginTests"/>
+        <method signature="LoginTests.selectMenuOptionTest()[pri:0, instance:test.LoginTests@1184ab05]" name="selectMenuOptionTest" class="test.LoginTests"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="ContactUsTests.submitContactForm(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.ContactUsTests@3aefe5e5]" name="submitContactForm" class="test.ContactUsTests"/>
+        <method signature="LoginTests.selectMenuOptionTest()[pri:0, instance:test.LoginTests@1184ab05]" name="selectMenuOptionTest" class="test.LoginTests"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="WebPage Test" duration-ms="3211" started-at="2023-02-05T17:02:34Z" finished-at="2023-02-05T17:02:37Z">
-      <class name="test.SecondTests">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:test.SecondTests@4386f16]" name="launchBrowser" is-config="true" duration-ms="2853" started-at="2023-02-05T17:02:34Z" finished-at="2023-02-05T17:02:37Z">
+    <test name="Basic Test" duration-ms="33581" started-at="2023-02-11T16:27:03Z" finished-at="2023-02-11T16:27:36Z">
+      <class name="test.LoginTests">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:test.LoginTests@1184ab05]" name="launchBrowser" is-config="true" duration-ms="7543" started-at="2023-02-11T16:27:03Z" finished-at="2023-02-11T16:27:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://nktechsolutions.com/membership-login/]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="handleHoverOverDropdown()[pri:0, instance:test.SecondTests@4386f16]" name="handleHoverOverDropdown" duration-ms="302" started-at="2023-02-05T17:02:37Z" finished-at="2023-02-05T17:02:37Z">
+        <test-method status="PASS" signature="loginWithInvalidEmailInvalidPassword(java.lang.String, java.lang.String)[pri:0, instance:test.LoginTests@1184ab05]" name="loginWithInvalidEmailInvalidPassword" duration-ms="2403" started-at="2023-02-11T16:27:10Z" data-provider="invalidLoginData" finished-at="2023-02-11T16:27:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[#3$6aks]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[#3ajk]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- handleHoverOverDropdown -->
-      </class> <!-- test.SecondTests -->
-    </test> <!-- WebPage Test -->
+        </test-method> <!-- loginWithInvalidEmailInvalidPassword -->
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:test.LoginTests@1184ab05]" name="launchBrowser" is-config="true" duration-ms="4871" started-at="2023-02-11T16:27:13Z" finished-at="2023-02-11T16:27:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://nktechsolutions.com/membership-login/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="loginWithInvalidEmailInvalidPassword(java.lang.String, java.lang.String)[pri:0, instance:test.LoginTests@1184ab05]" name="loginWithInvalidEmailInvalidPassword" duration-ms="2055" started-at="2023-02-11T16:27:18Z" data-provider="invalidLoginData" finished-at="2023-02-11T16:27:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidEmailInvalidPassword -->
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:test.LoginTests@1184ab05]" name="launchBrowser" is-config="true" duration-ms="4935" started-at="2023-02-11T16:27:20Z" finished-at="2023-02-11T16:27:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://nktechsolutions.com/membership-login/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="selectMenuOptionTest()[pri:0, instance:test.LoginTests@1184ab05]" name="selectMenuOptionTest" duration-ms="730" started-at="2023-02-11T16:27:25Z" finished-at="2023-02-11T16:27:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectMenuOptionTest -->
+      </class> <!-- test.LoginTests -->
+      <class name="test.ContactUsTests">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:test.ContactUsTests@3aefe5e5]" name="launchBrowser" is-config="true" duration-ms="6311" started-at="2023-02-11T16:27:25Z" finished-at="2023-02-11T16:27:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://nktechsolutions.com/membership-login/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="submitContactForm(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.ContactUsTests@3aefe5e5]" name="submitContactForm" duration-ms="4645" started-at="2023-02-11T16:27:32Z" data-provider="contactFormData" finished-at="2023-02-11T16:27:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[john]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[doe]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[mail@example.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test comments]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitContactForm -->
+      </class> <!-- test.ContactUsTests -->
+    </test> <!-- Basic Test -->
   </suite> <!-- Suite -->
 </testng-results>
