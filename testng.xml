@@ -15,7 +15,6 @@
 
 		<classes>
 		
-			<class name="test.LoginTests"/>			
 			<class name="test.ContactUsTests"/>
 
 		</classes>

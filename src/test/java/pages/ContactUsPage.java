@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import bsh.util.Util;
 import test.BaseTest;
@@ -37,7 +38,7 @@ public class ContactUsPage {
 	}
 	
 	public void fillOutContactForm(String firstName, String lastName, String email, String comments) {
-		
+				
 		BaseTest.wait.until(ExpectedConditions.visibilityOf(fName));
 		
 		UtilityMethods.sendKeysEle(fName, firstName);
@@ -46,8 +47,10 @@ public class ContactUsPage {
 		UtilityMethods.sendKeysEle(commentsEle, comments);
 		
 		submitBtn.click();
-		
-		Assert.assertTrue(contactUsSubmitted.getText().contains("Thanks for contacting us"));
+
+		BaseTest.wait.until(ExpectedConditions.visibilityOf(contactUsSubmitted));
+		Assert.assertTrue(contactUsSubmitted.getText().contains("Thanks for contacting us"), "expected value is not right");
+						
 	}
 	
 	

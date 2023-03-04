@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Basic Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Feb 11 11:27:03 EST 2023</td>
+<td>Started on:</td><td>Sat Feb 25 11:15:43 EST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>33 seconds (33581 ms)</td>
+<tr><td>Total time:</td><td>8 seconds (8495 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>regression </td>
 </tr><tr>
@@ -67,33 +67,53 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.LoginTests.loginWithInvalidEmailInvalidPassword()'><b>loginWithInvalidEmailInvalidPassword</b><br>Test class: test.LoginTests<br>Parameters: #3$6aks, #3ajk</td>
-<td></td>
-<td>2</td>
-<td>test.LoginTests@1184ab05</td></tr>
-<tr>
-<td title='test.LoginTests.loginWithInvalidEmailInvalidPassword()'><b>loginWithInvalidEmailInvalidPassword</b><br>Test class: test.LoginTests<br>Parameters: invalid, 123</td>
-<td></td>
-<td>2</td>
-<td>test.LoginTests@1184ab05</td></tr>
-<tr>
-<td title='test.LoginTests.selectMenuOptionTest()'><b>selectMenuOptionTest</b><br>Test class: test.LoginTests</td>
-<td></td>
-<td>0</td>
-<td>test.LoginTests@1184ab05</td></tr>
-<tr>
 <td title='test.ContactUsTests.submitContactForm()'><b>submitContactForm</b><br>Test class: test.ContactUsTests<br>Parameters: john, doe, mail@example.com, test comments</td>
-<td></td>
-<td>4</td>
-<td>test.ContactUsTests@3aefe5e5</td></tr>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected value is not right expected [true] but found [false]
+	at pages.ContactUsPage.fillOutContactForm(ContactUsPage.java:58)
+	at test.ContactUsTests.submitContactForm(ContactUsTests.java:29)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1959708563", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1959708563'><pre>java.lang.AssertionError: The following asserts failed:
+	expected value is not right expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at pages.ContactUsPage.fillOutContactForm(ContactUsPage.java:58)
+	at test.ContactUsTests.submitContactForm(ContactUsTests.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>test.ContactUsTests@47d90b9e</td></tr>
 </table><p>
 </body>
 </html>

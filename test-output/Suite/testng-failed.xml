@@ -5,7 +5,7 @@
   <test thread-count="5" name="Basic Test(failed)">
     <groups>
       <run>
-        <include name="smoke"/>
+        <include name="regression"/>
       </run>
     </groups>
     <classes>

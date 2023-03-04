@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,36 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.LoginTests" hash-for-method="loginWithInvalidEmailInvalidPassword(invalid, 123)">loginWithInvalidEmailInvalidPassword(invalid, 123)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.LoginTests" hash-for-method="loginWithInvalidEmailInvalidPassword(#3$6aks, #3ajk)">loginWithInvalidEmailInvalidPassword(#3$6aks, #3ajk)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.LoginTests" hash-for-method="selectMenuOptionTest">selectMenuOptionTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.ContactUsTests" hash-for-method="submitContactForm(john, doe, mail@example.com, test comments)">submitContactForm(john, doe, mail@example.com, test comments)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -132,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">test.ContactUsTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -144,41 +129,16 @@
                   </a> <!-- submitContactForm(john, doe, mail@example.com, test comments) -->
                   <span class="method-name">submitContactForm</span>
                   <span class="parameters">(john, doe, mail@example.com, test comments)</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	expected value is not right expected [true] but found [false]
+	at pages.ContactUsPage.fillOutContactForm(ContactUsPage.java:58)
+	at test.ContactUsTests.submitContactForm(ContactUsTests.java:29)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.LoginTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginWithInvalidEmailInvalidPassword(invalid, 123)">
-                  </a> <!-- loginWithInvalidEmailInvalidPassword(invalid, 123) -->
-                  <span class="method-name">loginWithInvalidEmailInvalidPassword</span>
-                  <span class="parameters">(invalid, 123)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginWithInvalidEmailInvalidPassword(#3$6aks, #3ajk)">
-                  </a> <!-- loginWithInvalidEmailInvalidPassword(#3$6aks, #3ajk) -->
-                  <span class="method-name">loginWithInvalidEmailInvalidPassword</span>
-                  <span class="parameters">(#3$6aks, #3ajk)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="selectMenuOptionTest">
-                  </a> <!-- selectMenuOptionTest -->
-                  <span class="method-name">selectMenuOptionTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -197,7 +157,6 @@
   &lt;/groups&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Basic Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.LoginTests&quot;/&gt;
       &lt;class name=&quot;test.ContactUsTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Basic Test --&gt;
@@ -212,7 +171,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Basic Test (2 classes)</span>
+                <span class="test-name">Basic Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -226,14 +185,6 @@
               <span class="test-group-name">regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">loginWithInvalidEmailInvalidPassword</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">selectMenuOptionTest</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
                 <span class="method-in-group-name">submitContactForm</span>
                 <br/>
               </div> <!-- method-in-group -->
@@ -241,10 +192,6 @@
             <div class="test-group">
               <span class="test-group-name">smoke</span>
               <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">selectMenuOptionTest</span>
-                <br/>
-              </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">submitContactForm</span>
                 <br/>
@@ -266,28 +213,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'submitContactForm')
 data.setCell(0, 2, 'test.ContactUsTests')
-data.setCell(0, 3, 4645);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginWithInvalidEmailInvalidPassword')
-data.setCell(1, 2, 'test.LoginTests')
-data.setCell(1, 3, 2403);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'loginWithInvalidEmailInvalidPassword')
-data.setCell(2, 2, 'test.LoginTests')
-data.setCell(2, 3, 2055);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'selectMenuOptionTest')
-data.setCell(3, 2, 'test.LoginTests')
-data.setCell(3, 3, 730);
+data.setCell(0, 3, 3063);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -313,41 +248,16 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.LoginTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.ContactUsTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchBrowser(https://nktechsolutions.com/membership-login/)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginWithInvalidEmailInvalidPassword(#3$6aks, #3ajk)</span>
-                <span class="method-start">7543 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">launchBrowser(https://nktechsolutions.com/membership-login/)</span>
-                <span class="method-start">9949 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">loginWithInvalidEmailInvalidPassword(invalid, 123)</span>
-                <span class="method-start">14820 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">launchBrowser(https://nktechsolutions.com/membership-login/)</span>
-                <span class="method-start">16877 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">selectMenuOptionTest</span>
-                <span class="method-start">21812 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">test.ContactUsTests</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">launchBrowser(https://nktechsolutions.com/membership-login/)</span>
-                <span class="method-start">22547 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">submitContactForm(john, doe, mail@example.com, test comments)</span>
-                <span class="method-start">28858 ms</span>
+                <span class="method-start">5365 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
